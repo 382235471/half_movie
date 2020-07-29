@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.half.movie.dao.WxUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.half.movie.entity.WxUser">
+        <result column="id" property="id" />
+        <result column="creationtime" property="creationtime" />
+        <result column="creator" property="creator" />
+        <result column="modifier" property="modifier" />
+        <result column="modifiedtime" property="modifiedtime" />
+        <result column="openid" property="openid" />
+        <result column="nickname" property="nickname" />
+        <result column="avatarurl" property="avatarurl" />
+        <result column="gender" property="gender" />
+        <result column="country" property="country" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="language" property="language" />
+        <result column="mobile" property="mobile" />
+        <result column="lastlogintime" property="lastlogintime" />
+        <result column="session_key" property="sessionKey" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        creationtime,
+        creator,
+        modifier,
+        modifiedtime,
+        openid, nickname, avatarurl, gender, country, province, city, language, mobile, lastlogintime, session_key
+    </sql>
+
+</mapper>

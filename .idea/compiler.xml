@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="movie-common" />
+        <module name="movie-service" />
+        <module name="movie-dao" />
+        <module name="movie-shiro" />
+        <module name="movie-web" />
+        <module name="movie-entity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="movie-dao (1)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="half-movie" options="-parameters" />
+      <module name="movie-common" options="-parameters" />
+      <module name="movie-dao" options="-parameters" />
+      <module name="movie-dao (1)" options="-parameters" />
+      <module name="movie-entity" options="-parameters" />
+      <module name="movie-service" options="-parameters" />
+      <module name="movie-shiro" options="-parameters" />
+      <module name="movie-web" options="-parameters" />
+    </option>
+  </component>
+</project>
