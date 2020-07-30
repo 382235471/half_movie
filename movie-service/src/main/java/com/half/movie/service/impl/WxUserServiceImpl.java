@@ -5,10 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.auth0.jwt.JWT;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.half.movie.common.utils.RedisUtils;
-import com.half.movie.common.utils.ResponseCode;
-import com.half.movie.common.utils.ResponseData;
-import com.half.movie.common.utils.UrlUtil;
+import com.half.movie.common.utils.*;
 import com.half.movie.entity.Code2SessionResponse;
 import com.half.movie.entity.WxUser;
 import com.half.movie.dao.WxUserMapper;
@@ -39,6 +36,7 @@ public class WxUserServiceImpl extends ServiceImpl<WxUserMapper, WxUser> impleme
     private String appid;
     @Value("${wx.applet.appsecret}")
     private String appSecret;
+
 
 
     @Override
@@ -73,6 +71,7 @@ public class WxUserServiceImpl extends ServiceImpl<WxUserMapper, WxUser> impleme
         }
     }
 
+
     public String code2Session(String wxCode) {
         // code  -> openid
         String requestUrl = "https://api.weixin.qq.com/sns/jscode2session";
@@ -94,4 +93,7 @@ public class WxUserServiceImpl extends ServiceImpl<WxUserMapper, WxUser> impleme
         WxUser wxUser = wxUserMapper.selectOne(queryWrapper);
         return wxUser;
     }
+
+
+
 }

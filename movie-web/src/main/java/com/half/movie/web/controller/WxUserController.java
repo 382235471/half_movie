@@ -45,4 +45,6 @@ public class WxUserController {
         }
         return responseData;
     }
+
+
 }
